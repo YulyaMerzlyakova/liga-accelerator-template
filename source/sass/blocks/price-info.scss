@@ -1,0 +1,197 @@
+.price-info__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @include vp-1365 {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+}
+
+.price-info__item {
+  position: relative;
+  z-index: 10;
+  background: $color-default-white;
+  border: 7px solid $color-default-white;
+  width: 360px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 40px 58px;
+  background-color: $color-default-white;
+
+  @include vp-1365 {
+    width: 440px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    padding: 45px 35px 43px;
+  }
+
+  @include hover-focus {
+    border-image: $gradient-border;
+    border-image-slice: 1;
+  }
+
+  @include active {
+    border-image: $gradient-border;
+    border-image-slice: 1;
+  }
+}
+
+.price-info__item.is-active {
+  border-image: $gradient-border;
+  border-image-slice: 1;
+}
+
+.price-info__item::before {
+  position: absolute;
+  content: attr(data-price);
+  width: 100%;
+  height: 150px;
+  color: #e8e8e8;
+  bottom: 153px;
+  right: 0;
+  opacity: 0.48;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 150%;
+  z-index: -1;
+
+  @include vp-1365 {
+    bottom: 135px;
+  }
+
+  @include vp-767 {
+    font-size: 80px;
+    height: 162px;
+    bottom: 63px;
+  }
+}
+
+.price-info__button.button-active {
+  color: $color-default-white;
+  background-image: $gradient-secondary;
+  border-color: transparent;
+  background-origin: border-box;
+}
+
+.price-info__item h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 7px;
+
+  @include vp-1365 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 15px;
+  }
+}
+
+.price-info__item span {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.price-info__item--time span {
+  @include vp-1365 {
+    color: $color-text-price;
+  }
+}
+
+.price-info__item p {
+  padding-top: 68px;
+  padding-bottom: 35px;
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $color-focus-btn;
+
+  @include vp-1365 {
+    padding-top: 72px;
+    padding-bottom: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 48px;
+    padding: 62px 0 23px;
+  }
+}
+
+.price-info__item svg {
+  @include vp-767 {
+    width: 24px;
+    height: 32px;
+  }
+}
+
+.price-info__button {
+  border-color: $color-default;
+  color: $color-default;
+  padding: 25px 42px;
+
+  @include hover-focus {
+    color: $color-default-white;
+    background-image: $gradient-secondary;
+    border-color: transparent;
+    background-origin: border-box;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  @include vp-1365 {
+    padding: 20px 44px;
+    width: auto;
+  }
+
+  @include vp-767 {
+    padding: 21px 42px 19px 43px;
+  }
+}
+
+.price-info__item:focus-within {
+  border-image: $gradient-border;
+  border-image-slice: 1;
+}
+
+.price-info__item:hover .price-info__button {
+  color: $color-default-white;
+  background-image: $gradient-secondary;
+  border-color: transparent;
+  background-origin: border-box;
+}
+
+.price-info__item:active .price-info__button {
+  background-image: $gradient-secondary;
+  border-color: transparent;
+  background-origin: border-box;
+  color: rgba($color-default-white, 0.7);
+}

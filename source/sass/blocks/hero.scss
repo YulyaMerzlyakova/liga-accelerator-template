@@ -1,0 +1,149 @@
+.hero__container {
+  padding-bottom: 120px;
+  display: flex;
+  color: $color-default-white;
+
+  @include vp-1365 {
+    padding-bottom: 100px;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+}
+
+.hero__button {
+  margin-left: 156px;
+  margin-right: 70px;
+
+  @include vp-1365 {
+    margin-left: 140px;
+    margin-right: 0;
+    width: 185px;
+    padding: 20px 10px;
+  }
+
+  @include vp-767 {
+    font-weight: 700;
+    width: 290px;
+    margin: 0;
+  }
+
+  @include hover-focus {
+    outline: none;
+    background: $color-default-white;
+    color: $color-focus-btn;
+    border-color: transparent;
+  }
+
+  @include active {
+    outline: none;
+    background: $color-default-white;
+    color: $color-default;
+    border-color: transparent;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.hero__description {
+  display: flex;
+  margin: 11px 70px 50px 0;
+
+  @include vp-1365 {
+    margin-right: 30px;
+    margin-top: 0;
+    width: 324px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    margin: 0 0 59px -1px;
+  }
+}
+
+.hero__description ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 51px;
+  margin-right: 2px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 114px;
+  font-size: 14px;
+  line-height: 22px;
+
+  @include vp-1365 {
+    margin-right: auto;
+    padding-bottom: 24px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 2px;
+    line-height: 20px;
+  }
+}
+
+.hero__title {
+  width: 270px;
+  text-align: right;
+  margin-top: 52px;
+
+  @include vp-1365 {
+    margin-top: 31px;
+    width: 185px;
+  }
+
+  @include vp-767 {
+    width: 162px;
+    margin-top: 39px;
+  }
+}
+
+.hero__title h2 {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+}
+
+.hero__title h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: $ff-alumnisans;
+  font-size: 92px;
+  font-weight: 800;
+  line-height: 110px;
+  letter-spacing: 4.6px;
+  text-align: right;
+
+  @include vp-1365 {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: normal;
+  }
+
+  @include vp-767 {
+    font-size: 62px;
+    line-height: 70px;
+    letter-spacing: 1.86px;
+  }
+}
+
+.hero__img {
+  @include vp-767 {
+    display: none;
+  }
+}

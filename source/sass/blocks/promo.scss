@@ -1,0 +1,287 @@
+.promo {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1365 {
+    padding-top: 101px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 70px;
+  }
+}
+
+.promo h2 {
+  text-align: center;
+  padding-bottom: 70px;
+
+  @include vp-1365 {
+    padding-bottom: 39px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 41px;
+  }
+}
+
+.promo__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1365 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    gap: 40px;
+  }
+}
+
+.promo__season {
+  background-color: $color-background-action;
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.promo__text {
+  display: flex;
+  flex-direction: column;
+  color: $color-default-white;
+  padding: 40px 45px 38px 35px;
+
+  @include vp-1365 {
+    padding-top: 45px;
+  }
+
+  @include vp-767 {
+    min-height: 300px;
+    align-items: center;
+    padding: 46px 40px 39px;
+  }
+}
+
+.promo__text h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+
+  @include vp-1365 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.promo__text span {
+  padding: 15px 10px 25px;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+
+  @include vp-1365 {
+    padding: 5px 10px 20px;
+  }
+
+  @include vp-767 {
+    padding-top: 8px;
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.promo__text p {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+
+  @include vp-767 {
+    text-align: center;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.promo__promotion {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.promo__block {
+  color: $color-focus;
+  display: flex;
+  flex-direction: column;
+  padding: 23px 28px 22px 18px;
+  border: 7px solid;
+  border-image: $gradient-border;
+  border-image-slice: 1;
+
+  @include vp-767 {
+    align-items: center;
+    padding: 39px 20px 27px;
+  }
+}
+
+.promo__block h3 {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+
+  @include vp-1365 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    padding-left: 0;
+  }
+}
+
+.promo__block p {
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  @include vp-1365 {
+    padding-bottom: 36px;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 30px 21px;
+  }
+}
+
+.promo__link {
+  width: max-content;
+  position: relative;
+  color: $color-focus;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin-top: auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-focus;
+  }
+
+  &:active {
+    color: $color-focus;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.promo__link::before {
+  position: absolute;
+  content: "";
+  width: 79px;
+  height: 1px;
+  background: $color-focus;
+  left: 10px;
+  bottom: 6px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    display: none;
+  }
+}
+
+.promo__link--season {
+  color: $color-default-white;
+
+  &:focus-visible {
+    outline: 1px solid $color-default-white;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+}
+
+.promo__link--season::before {
+  position: absolute;
+  content: "";
+  width: 79px;
+  height: 1px;
+  left: 10px;
+  bottom: 6px;
+  background: $color-default-white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    display: none;
+  }
+
+  &:active {
+    background: $color-default-white;
+  }
+}
+
+.promo__img img {
+  width: 100%;
+}

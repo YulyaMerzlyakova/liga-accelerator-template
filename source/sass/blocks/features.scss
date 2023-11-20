@@ -1,0 +1,286 @@
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: $color-other-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-1365 {
+    padding-top: 101px;
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 15px;
+  }
+}
+
+.features__container {
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.features__container h2 {
+  text-align: center;
+  padding-bottom: 50px;
+
+  @include vp-1365 {
+    padding-bottom: 49px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 54px;
+  }
+}
+
+.features__wrapper {
+  display: flex;
+  justify-content: center;
+
+  @include vp-1365 {
+    margin-left: 1px;
+  }
+}
+
+.features__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 360px;
+  row-gap: 115px;
+  min-height: 344px;
+
+  @include vp-1365 {
+    row-gap: 341px;
+    column-gap: 49px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.features__item {
+  position: relative;
+  display: flex;
+  width: 340px;
+
+  @include vp-1365 {
+    width: 315px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 11px;
+    padding: 0 40px 34px;
+  }
+}
+
+.features__item--area .features__info {
+  @include vp-767 {
+    width: 160px;
+  }
+}
+
+.features__item--area::before,
+.features__item--parking::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: -60px;
+  background-color: rgba(209, 10, 66, 0.2);
+
+  @include vp-1365 {
+    display: none;
+  }
+}
+
+.features__item--middle {
+  top: 4px;
+  position: absolute;
+  width: 240px;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 30px 79px;
+  background-color: $color-focus;
+  color: $color-default-white;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include vp-1365 {
+    width: 400px;
+    padding: 35px;
+    top: 50%;
+    margin-top: -1px;
+    margin-left: -1px;
+    transform: translate(-50%, -50%);
+  }
+
+  @include vp-767 {
+    position: static;
+    width: 100%;
+    transform: translate(0);
+    margin-top: 5px;
+    padding-top: 30px;
+    gap: 0;
+    padding-bottom: 39px;
+    margin-bottom: 40px;
+  }
+}
+
+.features__item--middle p {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+
+  @include vp-767 {
+    margin-left: -2px;
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.features__item--middle b {
+  padding: 12px 0 35px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+
+  @include vp-1365 {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 25px 0;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 6px 0 20px;
+  }
+}
+
+.features__item--middle span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+
+  @include vp-1365 {
+    margin-left: 1px;
+    width: 210px;
+  }
+
+  @include vp-767 {
+    width: 172px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+  }
+}
+
+.features__title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @include vp-767 {
+    align-items: center;
+  }
+}
+
+.features__title p {
+  padding: 0;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+  background: $gradient-background-number;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include vp-767 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.features__title span {
+  padding: 0;
+  margin: 0;
+  margin-top: 1px;
+  color: $color-features-text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include vp-767 {
+    line-height: 20px;
+  }
+}
+
+.features__info {
+  padding-left: 30px;
+
+  @include vp-1365 {
+    padding-left: 15px;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.features__info h3 {
+  margin: 0;
+  padding: 1px 0 7px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include vp-1365 {
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+  }
+}
+
+.features__info p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  @include vp-1365 {
+    padding-top: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 13px;
+  }
+}
+
+.features__info--comfort {
+  @include vp-1365 {
+    padding-left: 16px;
+  }
+}
